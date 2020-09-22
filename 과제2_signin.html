@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <title>회원가입페이지</title>
+</head>
+<body>
+  <h1>SIGN IN</h1>
+  <form action = "과제2_show.php" method="post">
+    <table>
+      <tr>
+        <td>ID</td>
+        <td><input type="text" name="id" /></td>
+      </tr>
+      <tr>
+        <td>PW</td>
+        <td><input type="password" name="pw" /></td>
+      </tr>
+      <tr>
+        <td>성별</td>
+        <td>
+          <input type="radio" name="gender" value="남성" />
+          남성
+          <input type="radio" name="gender" value="여성" />
+          여성
+        </td>
+      </tr>
+    </table>
+    <p>
+   <!-- name이 submit 이면 제출 기능(이미지 활용할 때 name에 submit 쓰면 같은 역할 가능), reset이면 초기화 기능(이미지 활용도 마찬가지)-->
+   <input type="submit" id="button" onclick='button_click();' value="가입하기"/>
+   <input type="reset" name="reset" id="reset" value="다시쓰기">
+ </p>
+ <script>
+   function button_click(){
+     alert("회원가입이 완료되었습니다.");
+   }
+  </script>
+  </form>
+</body>
+</html>
