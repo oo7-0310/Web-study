@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>main</title>
+</head>
+<body>
+  <?php
+  echo "ID : "
+  <h1>게시글 작성</h1>
+    <select name="게시판">
+      <option value="free" selected>자유게시판
+      <option value="diary">일기
+    </select>
+  <textarea name="textarea" cols="38" rows="1" id="textarea" style="resize: none;" placeholder="제목을 입력하세요."></textarea>
+  <p><textarea name="message" cols="50" rows="10" id="textarea"  placeholder="내용을 입력하세요."></textarea></p>
+  <p>
+  <input type="button" id="button" onclick='button_click();' value="저장하기"/>
+  </p>
+  <script>
+  function button_click(){
+   alert("글이 저장되었습니다.");
+  }
+  </script>
+  </form>
+</body>
+</html>
