@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php
 session_start();
-if(!isset($_SESSION['ID']) || !isset($_SESSION['PW'])) {
-        Header('location: login.php');}
+if(!isset($_SESSION['id']) || !isset($_SESSION['pwd'])) {
+        Header('location: login.php');}//세션 미연결 시 login.php로 이동
 else{
           echo"<br>";
         }
@@ -14,8 +14,8 @@ else{
 </head>
 <body>
   <?php
-    echo "ID :".$_SESSION['ID'].".<br>";
-    echo "PW : ".$_SESSION['PW'];
+    echo "ID :".$_SESSION['id'].".<br>";
+    echo "PW : ".$_SESSION['pwd'];
     ?>
     <a href="logout.php">로그아웃</a>
   <h1>게시글 작성</h1>

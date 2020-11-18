@@ -1,10 +1,8 @@
-<?php
-session_start();
-$_SESSION['ID'] = "lek";
-$_SESSION["PW"] = "1111";
+<?PHP
+$con=mysqli_connect("localhost", "root", "toor0310","mydb") or die ("mysql connect error");
 
- ?>
 
+?>/
 
 <!DOCTYPE html>
 <html>
@@ -15,7 +13,7 @@ $_SESSION["PW"] = "1111";
 
 <body>
   <h1>LOGIN</h1>
-  <form action = "check.php" method="POST">
+  <form action = "check.php" method="POST"><!--post 형식으로 ID,PW에 입력한 값을 보낸다 -->
     <table>
       <tr>
         <td>ID</td>
@@ -26,6 +24,7 @@ $_SESSION["PW"] = "1111";
         <td><input type="password" name="PW" /></td>
       </tr>
     </table>
-      <input type="button" onclick="location.href = 'check.php'" value="login"/>
+      <input type="submit" onclick="location.href = 'check.php'" value="login"/><!--check.php는 입력한 계정 저옵가 기존에 있는 것과 일치하는지 확인하는 곳 -->
+      <button onclick="location.href = 'signup.html'"> sign up </button><!--signup.html은 회원가입하는 곳-->
 </body>
 </html>
